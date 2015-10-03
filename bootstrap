@@ -4,3 +4,8 @@ unless system("/usr/local/bin/brew -v")
   puts "Installing homebrew..."
   system %{ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"}
 end
+
+unless system("/usr/local/bin/ansible -v")
+  puts "Installing ansible..."
+  system "brew install ansible"
+end
