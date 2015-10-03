@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+unless system("/usr/local/bin/brew -v")
+  puts "Installing homebrew..."
+  system %{ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"}
+end
