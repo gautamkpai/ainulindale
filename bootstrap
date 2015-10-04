@@ -5,7 +5,12 @@ unless system("/usr/local/bin/brew -v")
   system %{ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"}
 end
 
-unless system("/usr/local/bin/ansible -v")
+unless system("/usr/local/bin/ansible --version")
   puts "Installing ansible..."
   system "brew install ansible"
+end
+
+unless Dir.exists?("/tmp/ainulindale/")
+  puts "Downloading ainulindale..."
+  system "git clone https://github.com/gautamkpai/ainulindale.git /tmp/ainulindale"
 end
