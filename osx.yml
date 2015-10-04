@@ -1,6 +1,7 @@
 ---
 - name: Macbook development setup
   hosts: localhost
+  connection: local
 
   tasks:
   - name: Update homebrew
