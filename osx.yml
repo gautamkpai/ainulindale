@@ -12,3 +12,6 @@
 
   - name: Install git
     homebrew: name=git state=present
+
+  - name: Install firefox
+    homebrew_cask: name=firefox state=present
