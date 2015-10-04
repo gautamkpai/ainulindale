@@ -1,0 +1,13 @@
+---
+- name: Macbook development setup
+  hosts: localhost
+
+  tasks:
+  - name: Update homebrew
+    homebrew: update_homebrew=yes
+
+  - name: Install vim
+    homebrew: name=vim state=present
+
+  - name: Install git
+    homebrew: name=git state=present
