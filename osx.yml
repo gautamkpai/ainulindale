@@ -4,11 +4,7 @@
   connection: local
 
   tasks:
-  - name: Update homebrew
-    homebrew: update_homebrew=yes
-
-  - name: Install cask
-    homebrew: name=caskroom/cask/brew-cask state=present
+  - include: tasks/base.yml
 
   - name: Install vim
     homebrew: name=vim state=present
