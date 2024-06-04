@@ -1,0 +1,14 @@
+---
+- name: Install DevOps toolkit
+  hosts: localhost
+  connection: local
+
+  tasks:
+  - name: Lima VM
+    homebrew: name=lima
+
+  - name: kubectl
+    homebrew: name=kubectl
+
+  - name: helm
+    homebrew: name=helm
