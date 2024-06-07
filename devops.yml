@@ -12,3 +12,9 @@
 
   - name: helm
     homebrew: name=helm
+
+  - name: k9s
+    homebrew: name=k9s
+
+  - name: kubectx
+    homebrew: name=kubectx
