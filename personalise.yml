@@ -36,3 +36,24 @@
       loop:
         - vimrc
         - vim
+
+    - name: symlink git templates dir & globalignore file
+      file:
+        src: '{{ src_dir_path }}/dotfiles/{{ item }}'
+        dest: '~/.{{ item }}'
+        state: link
+      loop:
+        - git_template
+        - gitignore_global
+
+    - name: Set git global configs - template dir
+      git_config:
+        name: '{{ item.name }}'
+        scope: global
+        value: '{{ item.value }}'
+      loop:
+        - { name: user.name, value: 'K Gautam Pai' }
+        - { name: user.email, value: 'gautampai@gautampai.com' }
+        - { name: init.templatedir, value: ~/.git_template }
+        - { name: alias.ctags, value: '!.git/hooks/ctags' }
+        - { name: core.excludesfile, value: ~/.gitignore_global }
