@@ -2,19 +2,17 @@
 - name: Install DevOps toolkit
   hosts: localhost
   connection: local
+  vars:
+    brew_tools:
+      - lima
+      - kubectl
+      - helm
+      - k9s
+      - kubectx
 
   tasks:
-  - name: Lima VM
-    homebrew: name=lima
-
-  - name: kubectl
-    homebrew: name=kubectl
-
-  - name: helm
-    homebrew: name=helm
-
-  - name: k9s
-    homebrew: name=k9s
-
-  - name: kubectx
-    homebrew: name=kubectx
+  - name: Install devops tools
+    homebrew:
+      name: '{{ item }}'
+      state: present
+    loop: '{{ brew_tools }}'
