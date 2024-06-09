@@ -14,10 +14,9 @@
   tasks:
     - name: Install basic cli tools
       homebrew:
-        name="{{ item }}"
-        state=present
+        name: "{{ item }}"
+        state: present
       loop: "{{ brew_tools }}"
 
     - name: Install iTerm2
       homebrew_cask: name=iterm2 state=present
-
