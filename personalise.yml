@@ -1,0 +1,38 @@
+---
+- name: Personalise setup
+  hosts: localhost
+  connection: local
+  vars:
+    src_dir_name: pai
+    src_dir_path: '{{ ansible_env.HOME }}/src/{{ src_dir_name }}'
+
+  tasks:
+    - name: Create a base dir for all source code
+      file:
+        path: '{{ src_dir_path }}'
+        state: directory
+
+    - name: Clone the dotfiles repo
+      git:
+        repo: git@github.com:gautamkpai/dotfiles.git
+        dest: '{{ src_dir_path }}/dotfiles'
+
+    - name: check if ~/.vim exists & is a symlink
+      stat:
+        path: '{{ ansible_env.HOME }}/.vim'
+      register: sym
+
+    - name: Ensure ~/.vim is not dir
+      file:
+        path: '{{ ansible_env.HOME }}/.vim'
+        state: absent
+      when: sym.stat.islnk is defined and sym.stat.islnk == False
+
+    - name: symlink vim configs
+      file:
+        src: '{{ src_dir_path }}/dotfiles/{{ item }}'
+        dest: '~/.{{ item }}'
+        state: link
+      loop:
+        - vimrc
+        - vim
