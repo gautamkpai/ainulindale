@@ -5,6 +5,7 @@
   vars:
     brew_apps:
       - firefox
+      - obsidian
       - slack
       - mattermost
       - microsoft-teams
