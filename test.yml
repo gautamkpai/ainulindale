@@ -1,6 +1,7 @@
 ---
 - name: Ping Test
   hosts: localhost
+  connection: local
 
   tasks:
   - name: Ping!
