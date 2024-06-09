@@ -1,0 +1,20 @@
+---
+- name: Macbook basic apps
+  hosts: localhost
+  connection: local
+  vars:
+    brew_apps:
+      - firefox
+      - slack
+      - mattermost
+      - microsoft-teams
+      - 1password
+      - vlc
+      - openvpn-connect
+
+  tasks:
+  - name: Install cask apps
+    homebrew_cask:
+      name: '{{ item }}'
+      state: present
+    loop: '{{ brew_apps }}'
