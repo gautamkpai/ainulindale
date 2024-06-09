@@ -1,0 +1,20 @@
+---
+- name: Macbook development setup
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Install basic cli tools
+      homebrew:
+        name="{{ item }}"
+        state=present
+      loop:
+        - git
+        - vim
+        - fzf
+        - rg
+        - bat
+
+    - name: Install iTerm2
+      homebrew_cask: name=iterm2 state=present
+
