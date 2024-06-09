@@ -2,15 +2,23 @@
 - name: Macbook development setup
   hosts: localhost
   connection: local
+  vars:
+    brew_tools:
+      - git
+      - vim
+      - universal-ctags
+      - fzf
+      - rg
+      - bat
 
   tasks:
-  - include: tasks/base.yml
+    - name: Install basic cli tools
+      homebrew:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ brew_tools }}"
 
-  - name: Install vim
-    homebrew: name=vim state=present
-
-  - name: Install git
-    homebrew: name=git state=present
-
-  - name: Install firefox
-    homebrew_cask: name=firefox state=present
+    - name: Install iTerm2
+      homebrew_cask:
+        name: iterm2
+        state: present
