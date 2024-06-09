@@ -15,4 +15,4 @@ unless Dir.exists?("/tmp/ainulindale/")
   system "git clone https://github.com/gautamkpai/ainulindale.git /tmp/ainulindale"
 end
 
-system "cd /tmp/ainulindale && ansible-playbook test.yml"
+system "cd /tmp/ainulindale && ansible-playbook 0-test.yml"

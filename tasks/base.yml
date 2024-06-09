@@ -1,6 +1,0 @@
----
-- name: Update homebrew
-  homebrew: update_homebrew=yes
-
-- name: Install cask
-  homebrew: name=caskroom/cask/brew-cask state=present
