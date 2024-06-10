@@ -7,6 +7,25 @@
     src_dir_path: '{{ ansible_env.HOME }}/src/{{ src_dir_name }}'
 
   tasks:
+    - name: Set key repeat - highest rate, lowest delay
+      osx_defaults:
+        domain: NSGlobalDomain
+        key: '{{ item.key }}'
+        type: float
+        value: '{{ item.value }}'
+        state: present
+      loop:
+        - { key: KeyRepeat, value: 2 }
+        - { key: InitialKeyRepeat, value: 15 }
+
+    - name: Autohide dock
+      osx_defaults:
+        domain: com.apple.dock
+        key: autohide
+        type: bool
+        value: true
+        state: present
+
     - name: Create a base dir for all source code
       file:
         path: '{{ src_dir_path }}'
