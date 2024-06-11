@@ -76,3 +76,9 @@
         - { name: init.templatedir, value: ~/.git_template }
         - { name: alias.ctags, value: '!.git/hooks/ctags' }
         - { name: core.excludesfile, value: ~/.gitignore_global }
+
+    - name: symlink zshrc file
+      file:
+        src: '{{ src_dir_path }}/dotfiles/zshrc'
+        dest: '~/.zshrc'
+        state: link
