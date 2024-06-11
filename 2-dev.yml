@@ -13,6 +13,7 @@
       - eza
       - fd
       - diskus
+      - zsh-syntax-highlighting
 
   tasks:
     - name: Install basic cli tools
