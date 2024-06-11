@@ -9,6 +9,7 @@
       - helm
       - k9s
       - kubectx
+      - eksctl
 
   tasks:
   - name: Install devops tools
