@@ -11,6 +11,8 @@
       - rg
       - bat
       - eza
+      - fd
+      - diskus
 
   tasks:
     - name: Install basic cli tools
