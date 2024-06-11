@@ -10,6 +10,7 @@
       - fzf
       - rg
       - bat
+      - eza
 
   tasks:
     - name: Install basic cli tools
