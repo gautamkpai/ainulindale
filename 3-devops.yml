@@ -10,6 +10,7 @@
       - k9s
       - kubectx
       - eksctl
+      - awscli
 
   tasks:
   - name: Install devops tools
