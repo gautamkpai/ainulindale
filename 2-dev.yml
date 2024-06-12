@@ -12,8 +12,10 @@
       - bat
       - eza
       - fd
+      - zoxide
       - diskus
       - zsh-syntax-highlighting
+      - zsh-autosuggestions
 
   tasks:
     - name: Install basic cli tools
