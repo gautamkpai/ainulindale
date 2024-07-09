@@ -11,6 +11,7 @@
       - kubectx
       - eksctl
       - awscli
+      - tfenv
 
   tasks:
   - name: Install devops tools
