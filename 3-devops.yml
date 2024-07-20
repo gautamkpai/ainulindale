@@ -19,3 +19,10 @@
       name: '{{ item }}'
       state: present
     loop: '{{ brew_tools }}'
+
+  - name: Add aws brew tap
+    homebrew_tap:
+      name: aws/tap
+  - name: Install eks-node-viewer
+    homebrew:
+      name: eks-node-viewer
