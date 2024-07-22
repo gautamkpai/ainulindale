@@ -8,6 +8,7 @@
       - kubectl
       - helm
       - k9s
+      - stern
       - kubectx
       - eksctl
       - awscli
