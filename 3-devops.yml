@@ -12,6 +12,8 @@
       - eksctl
       - awscli
       - tfenv
+      - jq
+      - go
 
   tasks:
   - name: Install devops tools
