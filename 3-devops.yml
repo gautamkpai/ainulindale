@@ -13,6 +13,7 @@
       - eksctl
       - eks-node-viewer
       - awscli
+      - flyctl
       - tfenv
       - jq
       - go
