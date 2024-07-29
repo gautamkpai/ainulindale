@@ -15,6 +15,7 @@
       - awscli
       - flyctl
       - tfenv
+      - k6
       - jq
       - go
 
