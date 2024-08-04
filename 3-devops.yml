@@ -18,6 +18,9 @@
       - k6
       - jq
       - go
+      - pyenv
+      - pyenv-virtualenv
+      - graphviz
 
   tasks:
   # eks-node-viewer dependency
