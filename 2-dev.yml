@@ -16,6 +16,7 @@
       - diskus
       - zsh-syntax-highlighting
       - zsh-autosuggestions
+      - zsh-history-substring-search
 
   tasks:
     - name: Install basic cli tools
