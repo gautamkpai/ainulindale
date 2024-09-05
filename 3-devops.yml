@@ -17,9 +17,6 @@
       - tfenv
       - k6
       - jq
-      - go
-      - pyenv
-      - pyenv-virtualenv
       - graphviz
 
   tasks:

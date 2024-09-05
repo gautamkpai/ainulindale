@@ -18,6 +18,9 @@
       - zsh-autosuggestions
       - zsh-history-substring-search
       - rustup
+      - go
+      - pyenv
+      - pyenv-virtualenv
 
   tasks:
     - name: Install basic cli tools
