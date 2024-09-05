@@ -17,6 +17,7 @@
       - zsh-syntax-highlighting
       - zsh-autosuggestions
       - zsh-history-substring-search
+      - rustup
 
   tasks:
     - name: Install basic cli tools
