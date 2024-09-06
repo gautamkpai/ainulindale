@@ -82,3 +82,14 @@
         src: '{{ src_dir_path }}/dotfiles/zshrc'
         dest: '~/.zshrc'
         state: link
+
+    - name: Load custom prefs from a folder
+      osx_defaults:
+        domain: com.googlecode.iterm2.plist
+        key: '{{ item.key }}'
+        type: '{{ item.type }}'
+        value: '{{ item.value }}'
+        state: present
+      loop:
+        - { key: LoadCustomFolder, type: string, value: '{{ src_dir_path }}/dotfiles/iTerm2' }
+        - { key: LoadPrefsFromCustomFolder, type: bool,  value: True }
