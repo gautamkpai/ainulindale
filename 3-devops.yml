@@ -13,6 +13,7 @@
       - eksctl
       - eks-node-viewer
       - awscli
+      - session-manager-plugin
       - flyctl
       - tfenv
       - k6
