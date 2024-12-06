@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-unless system("/usr/local/bin/brew -v")
+unless system("/opt/homebrew/bin/brew -v")
   puts "Installing homebrew..."
   system %{/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"}
 end
 
-unless system("/usr/local/bin/ansible --version")
+unless system("/opt/homebrew/bin/ansible --version")
   puts "Installing ansible..."
   system "/opt/homebrew/bin/brew install ansible"
 end
