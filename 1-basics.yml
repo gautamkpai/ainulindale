@@ -8,9 +8,9 @@
       - obsidian
       - slack
       - mattermost
-      - microsoft-teams
+      # - microsoft-teams
       - 1password
-      - 1password-cli
+      # - 1password-cli
       - vlc
       - openvpn-connect
 
