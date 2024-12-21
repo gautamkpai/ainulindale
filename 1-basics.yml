@@ -13,6 +13,7 @@
       # - 1password-cli
       - vlc
       - openvpn-connect
+      - netbirdio/tap/netbird-ui
 
   tasks:
   - name: Install cask apps
