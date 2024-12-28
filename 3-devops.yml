@@ -19,6 +19,7 @@
       - k6
       - jq
       - graphviz
+      - docker # cli only
 
   tasks:
   # eks-node-viewer dependency
