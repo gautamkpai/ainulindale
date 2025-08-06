@@ -15,6 +15,7 @@
       - vlc
       - openvpn-connect
       - netbirdio/tap/netbird-ui
+      - font-jetbrains-mono-nerd-font
 
   tasks:
   - name: Install cask apps
