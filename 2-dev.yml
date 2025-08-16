@@ -24,6 +24,9 @@
       - pyenv
       - pyenv-virtualenv
       - uv
+    casks:
+      - iterm2
+      - kitty
 
   tasks:
     - name: Install basic cli tools
@@ -32,7 +35,8 @@
         state: present
       loop: "{{ brew_tools }}"
 
-    - name: Install iTerm2
+    - name: Install cask tools
       homebrew_cask:
-        name: iterm2
+        name: "{{ item }}"
         state: present
+      loop: "{{ casks }}"
