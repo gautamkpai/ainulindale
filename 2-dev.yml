@@ -27,6 +27,7 @@
     casks:
       - iterm2
       - kitty
+      - ghostty
 
   tasks:
     - name: Install basic cli tools
