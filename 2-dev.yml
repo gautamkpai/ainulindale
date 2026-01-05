@@ -28,6 +28,7 @@
       - iterm2
       - kitty
       - ghostty
+      - bruno
 
   tasks:
     - name: Install basic cli tools
