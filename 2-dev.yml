@@ -29,6 +29,7 @@
       - kitty
       - ghostty
       - bruno
+      - claude-code
 
   tasks:
     - name: Install basic cli tools
