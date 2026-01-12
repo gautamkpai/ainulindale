@@ -24,6 +24,7 @@
       - pyenv
       - pyenv-virtualenv
       - uv
+      - gh
     casks:
       - iterm2
       - kitty
