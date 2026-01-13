@@ -83,6 +83,15 @@
         dest: '~/.zshrc'
         state: link
 
+    - name: Setup nvim & ghostty configs
+      file:
+        src: '{{ src_dir_path }}/dotfiles/{{ item }}'
+        dest: '~/.config/{{item}}'
+        state: link
+      with_items:
+        - nvim
+        - ghostty
+
     - name: Load custom prefs from a folder
       osx_defaults:
         domain: com.googlecode.iterm2.plist
