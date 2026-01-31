@@ -29,7 +29,6 @@
     taps:
       - steveyegge/beads
     casks:
-      - iterm2
       - kitty
       - ghostty
       - bruno

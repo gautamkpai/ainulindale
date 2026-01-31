@@ -39,7 +39,7 @@ bootstrap (Ruby) → 0-test.yml → 1-basics.yml → 2-dev.yml → 3-devops.yml 
 - `bootstrap`: Installs Homebrew and Ansible, clones repo to `/tmp/ainulindale`
 - `0-test.yml`: Validates Ansible connectivity (ping module)
 - `1-basics.yml`: GUI apps (Firefox, Obsidian, Slack, Zoom, 1Password, VLC)
-- `2-dev.yml`: Dev tools (git, vim, fzf, rg, bat), terminals (iTerm2, Kitty, Ghostty), language SDKs (rustup, go, pyenv, uv)
+- `2-dev.yml`: Dev tools (git, vim, fzf, rg, bat), terminals (Kitty, Ghostty), language SDKs (rustup, go, pyenv, uv)
 - `3-devops.yml`: Cloud tools (AWS CLI, kubectl, helm, Terraform, Docker), monitoring (k6, jq)
 - `4-personalise.yml`: macOS settings, dotfiles symlinks from `~/src/pai/dotfiles/`, git config
 
