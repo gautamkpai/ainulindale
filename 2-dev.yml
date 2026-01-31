@@ -6,7 +6,6 @@
     brew_tools:
       - git
       - vim
-      - universal-ctags
       - fzf
       - rg
       - bat
