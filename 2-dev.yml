@@ -24,9 +24,7 @@
       - pyenv-virtualenv
       - uv
       - gh
-      - bd
-    taps:
-      - steveyegge/beads
+      - beads
     casks:
       - kitty
       - ghostty
@@ -34,12 +32,6 @@
       - claude-code
 
   tasks:
-    - name: Tap homebrew repositories
-      homebrew_tap:
-        name: "{{ item }}"
-        state: present
-      loop: "{{ taps }}"
-
     - name: Install basic cli tools
       homebrew:
         name: "{{ item }}"
