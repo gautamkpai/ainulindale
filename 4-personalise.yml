@@ -70,7 +70,7 @@
       loop:
         - { name: user.name, value: 'K Gautam Pai' }
         - { name: user.email, value: 'gautampai@gautampai.com' }
-        - { name: core.autocrlf, value: input }
+        - { name: core.autocrlf, value: 'input' }
         - { name: core.excludesfile, value: ~/.gitignore_global }
 
     - name: symlink zshrc file
