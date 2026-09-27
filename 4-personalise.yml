@@ -69,7 +69,7 @@
         value: '{{ item.value }}'
       loop:
         - { name: user.name, value: 'K Gautam Pai' }
-        - { name: user.email, value: 'gautampai@gautampai.com' }
+        - { name: user.email, value: 'gautamkpai@users.noreply.github.com' }
         - { name: core.autocrlf, value: 'input' }
         - { name: core.excludesfile, value: ~/.gitignore_global }
 
